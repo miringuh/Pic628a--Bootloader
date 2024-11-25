@@ -1,0 +1,153 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"767 /opt/microchip/xc8/v2.46/pic/include/proc/pic16f628a.h
+[v _CMCON `Vuc ~T0 @X0 0 e@31 ]
+"907
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+[p mainexit ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 /opt/microchip/xc8/v2.46/pic/include/builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 /opt/microchip/xc8/v2.46/pic/include/proc/pic16f628a.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PCLATH equ 0Ah ;# ">
+"312
+[; <" INTCON equ 0Bh ;# ">
+"390
+[; <" PIR1 equ 0Ch ;# ">
+"447
+[; <" TMR1 equ 0Eh ;# ">
+"454
+[; <" TMR1L equ 0Eh ;# ">
+"461
+[; <" TMR1H equ 0Fh ;# ">
+"468
+[; <" T1CON equ 010h ;# ">
+"527
+[; <" TMR2 equ 011h ;# ">
+"534
+[; <" T2CON equ 012h ;# ">
+"605
+[; <" CCPR1 equ 015h ;# ">
+"612
+[; <" CCPR1L equ 015h ;# ">
+"619
+[; <" CCPR1H equ 016h ;# ">
+"626
+[; <" CCP1CON equ 017h ;# ">
+"684
+[; <" RCSTA equ 018h ;# ">
+"755
+[; <" TXREG equ 019h ;# ">
+"762
+[; <" RCREG equ 01Ah ;# ">
+"769
+[; <" CMCON equ 01Fh ;# ">
+"839
+[; <" OPTION_REG equ 081h ;# ">
+"909
+[; <" TRISA equ 085h ;# ">
+"971
+[; <" TRISB equ 086h ;# ">
+"1033
+[; <" PIE1 equ 08Ch ;# ">
+"1090
+[; <" PCON equ 08Eh ;# ">
+"1139
+[; <" PR2 equ 092h ;# ">
+"1146
+[; <" TXSTA equ 098h ;# ">
+"1203
+[; <" SPBRG equ 099h ;# ">
+"1210
+[; <" EEDATA equ 09Ah ;# ">
+"1217
+[; <" EEADR equ 09Bh ;# ">
+"1224
+[; <" EECON1 equ 09Ch ;# ">
+"1262
+[; <" EECON2 equ 09Dh ;# ">
+"1269
+[; <" VRCON equ 09Fh ;# ">
+"5 ./headers/config.h
+[p x FOSC  =  HS ]
+"6
+[p x WDTE  =  OFF ]
+"7
+[p x PWRTE  =  ON ]
+"8
+[p x MCLRE  =  ON ]
+"9
+[p x BOREN  =  OFF ]
+"10
+[p x LVP  =  OFF ]
+"11
+[p x CPD  =  OFF ]
+"12
+[p x CP  =  OFF ]
+"11 ./headers/f628.h
+[v _led `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _led ]
+[v _val `uc ~T0 @X0 1 r1 ]
+[f ]
+"12
+[e = _CMCON -> -> 15 `i `uc ]
+"13
+[e = _TRISA -> -> 0 `i `uc ]
+"14
+[e = _PORTA _val ]
+"15
+[e :UE 56 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"4 f628.c
+[v _main `(i ~T0 @X0 1 ef2`i`**Cuc ]
+"5
+{
+[e :U _main ]
+"4
+[v _argc `i ~T0 @X0 1 r1 ]
+[v _argv `**Cuc ~T0 @X0 1 r2 ]
+"5
+[f ]
+"6
+[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"9
+[e :U 59 ]
+"10
+{
+"11
+[e ( _led (1 -> -> 1 `i `uc ]
+"12
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"13
+[e ( _led (1 -> -> 2 `i `uc ]
+"14
+[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"15
+}
+[e :U 58 ]
+[e $U 59  ]
+[e :U 60 ]
+"16
+[e ) -> 0 `i ]
+[e $UE 57  ]
+"17
+[e :UE 57 ]
+}
