@@ -8,8 +8,8 @@ all:
 	${PATH2} -mcpu=16f628a -mno-keep-startup --fill=0X3FFF@0:0X3F -mdownload-hex -ginhx32 -w -mconst-data-in-progmem  -funsigned-char -oheaders/$(FILE) ${FILE}.c
 parser:
 	${GCCS} -oparser.o parser.c
-	./parser.o >icsp.txt	
-#	./parser.o >../AVRs/isp.c	
+#	./parser.o >icsp.txt	
+	./parser.o >../AVRs/isp.c	
 
 arch:
 	/opt/microchip/xc8/v2.46/bin/xc8-ar dv --target=so headers/f628.h

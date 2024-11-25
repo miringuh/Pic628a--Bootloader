@@ -1,0 +1,13 @@
+.headers/*.sym
+.headers/*.hex 
+.headers/*.sdb 
+.headers/*.lst 
+.headers/*.o 
+.headers/*.rlf 
+.headers/*.s 
+.headers/*.d 
+.headers/*.i 
+.headers/*.p1 
+.headers/*.cmf 
+.headers/*.elf 
+.headers/*.hxl 
